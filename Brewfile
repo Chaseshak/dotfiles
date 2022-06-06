@@ -1,7 +1,7 @@
 # Dev tools
-cask "chromedriver"
-cask "font-fira-code"
 tap "homebrew/cask-fonts"
+cask "font-fira-code"
+cask "chromedriver"
 brew "libpq" # PostgreSQL support
 brew "redis"
 brew "sqlite"
@@ -13,18 +13,19 @@ brew "gh"
 brew "git"
 
 # CLI / Bash
-brew "zsh"
-brew "httpie"
-brew "thefuck"
 brew "curl"
+brew "fzf"
+brew "httpie"
 brew "speedtest"
+brew "thefuck"
+brew "zsh"
 
 # Languages / Language Tools
 brew "go"
-brew "rbenv"
-brew "ruby-build"
 brew "python"
 brew "python@3.7"
+brew "rbenv"
+brew "ruby-build"
 
 # Random
 brew "openssl@1.1"
