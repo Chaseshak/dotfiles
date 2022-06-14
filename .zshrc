@@ -1,5 +1,11 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+### HOMEBREW ###
+# NOTE: This must go at the top to ensure homebrew is in the path
+# Tames the amount of auto installing homebrew does
+export HOMEBREW_NO_AUTO_UPDATE=1
+export HOMEBREW_NO_INSTALL_CLEANUP=1
+export HOMEBREW_AUTO_UPDATE_SECS=90000000
+export PATH="/opt/homebrew/bin:$PATH"
+
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -120,13 +126,6 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 # tabtab source for packages
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
-
-### HOMEBREW ###
-# Tames the amount of auto installing homebrew does
-export HOMEBREW_NO_AUTO_UPDATE=1
-export HOMEBREW_NO_INSTALL_CLEANUP=1
-export HOMEBREW_AUTO_UPDATE_SECS=90000000
-export PATH="/opt/homebrew/bin:$PATH"
 
 ### MISC ###
 
