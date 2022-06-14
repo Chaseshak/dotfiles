@@ -16,7 +16,6 @@ brew "git"
 brew "curl"
 brew "fzf"
 brew "httpie"
-brew "speedtest"
 brew "thefuck"
 brew "zsh"
 
