@@ -5,6 +5,7 @@ cask "chromedriver"
 brew "libpq" # PostgreSQL support
 brew "redis"
 brew "sqlite"
+cask "visual-studio-code"
 brew "watch"
 brew "yadm"
 
