@@ -16,6 +16,7 @@ brew "git"
 # CLI / Bash
 brew "curl"
 brew "fzf"
+brew "gpg"
 brew "httpie"
 brew "thefuck"
 brew "zsh"
