@@ -14,6 +14,7 @@ brew "gh"
 brew "git"
 
 # CLI / Bash
+brew "cmake"
 brew "curl"
 brew "fzf"
 brew "gpg"
