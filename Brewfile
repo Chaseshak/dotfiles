@@ -8,6 +8,7 @@ brew "sqlite"
 cask "visual-studio-code"
 brew "watch"
 brew "yadm"
+cask "google-cloud-sdk"
 
 # Git-based tools
 brew "gh"
