@@ -49,7 +49,7 @@ alias gap='git add --intent-to-add . && git add --patch'
 
 # Misc.
 alias pip=pip3
-alias python=/usr/local/bin/python3
+alias python=/opt/homebrew/bin/python3
 alias ed_alias="vim $HOME/.oh-my-zsh-custom/aliases.zsh"
 alias rake='noglob rake'
 alias swagger="docker run --rm -it -e GOPATH=$HOME/go:/go -v $HOME:$HOME -w $(pwd) quay.io/goswagger/swagger"
