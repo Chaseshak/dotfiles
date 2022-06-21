@@ -7,6 +7,16 @@ export HOMEBREW_AUTO_UPDATE_SECS=90000000
 export PATH="/opt/homebrew/bin:$PATH"
 
 
+### HANDSHAKE ###
+# Specific to Handshake Remote Dev Environment
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+export NVM_DIR="$HOME/.nvm"
+source "$HOME/.nvm/nvm.sh"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+### END HANDSHAKE ###
+
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CUSTOM="$HOME/.oh-my-zsh-custom/"
@@ -130,3 +140,16 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 ### MISC ###
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+# Brew on Linux
+# # set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
