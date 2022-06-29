@@ -9,6 +9,7 @@ cask "visual-studio-code"
 brew "watch"
 brew "yadm"
 cask "google-cloud-sdk"
+cask "dbeaver-community"
 
 # Git-based tools
 brew "gh"

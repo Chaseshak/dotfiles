@@ -29,6 +29,12 @@
         "options": {
           "full_name": "google-cloud-sdk"
         }
+      },
+      "dbeaver-community": {
+        "version": "22.1.0",
+        "options": {
+          "full_name": "dbeaver-community"
+        }
       }
     },
     "brew": {
