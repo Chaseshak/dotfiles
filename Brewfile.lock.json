@@ -23,6 +23,12 @@
         "options": {
           "full_name": "visual-studio-code"
         }
+      },
+      "google-cloud-sdk": {
+        "version": "latest",
+        "options": {
+          "full_name": "google-cloud-sdk"
+        }
       }
     },
     "brew": {

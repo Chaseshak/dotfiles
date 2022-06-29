@@ -94,7 +94,7 @@ source $ZSH/oh-my-zsh.sh
 # Auto-completion for terminal typos
 eval $(thefuck --alias)
 
-# For easy project navigation 
+# For easy project navigation
 projects_path="$HOME/Projects"
 export projects_path
 
@@ -112,7 +112,7 @@ export PATH=/usr/local/opt/python/libexec/bin:$PATH
 export PATH="/usr/local/bin:${PATH}"
 export PATH="/usr/local/sbin:$PATH"
 
-# Rbenv 
+# Rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
@@ -123,7 +123,7 @@ export GPG_TTY=$(tty)
 export PGHOST=localhost
 
 # Golang
-export GOPATH=$HOME/go 
+export GOPATH=$HOME/go
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
@@ -137,10 +137,17 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
 
+# GCloud
+export CLOUDSDK_PYTHON_SITEPACKAGES=1
+
 ### MISC ###
 
+## NVM
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Brew on Linux
 # # set PATH so it includes user's private bin if it exists
