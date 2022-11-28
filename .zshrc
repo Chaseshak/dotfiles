@@ -108,7 +108,7 @@ project() {
 touch_directory() { mkdir -p "$(dirname "$1")" && touch "$1" ; }
 
 ### PATHS ###
-export PATH=/usr/local/opt/python/libexec/bin:$PATH
+export PATH="$(pyenv root)/shims:${PATH}"
 export PATH="/usr/local/bin:${PATH}"
 export PATH="/usr/local/sbin:$PATH"
 
@@ -124,10 +124,10 @@ export PGHOST=localhost
 
 # Golang
 export GOPATH=$HOME/go
-export GOROOT=/usr/local/opt/go/libexec
+export GOBIN=$GOPATH/bin
+export GOROOT="$(brew --prefix golang)/libexec"
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
-export GO111MODULE=off
 
 # Make forking work
 # https://blog.phusion.nl/2017/10/13/why-ruby-app-servers-break-on-macos-high-sierra-and-what-can-be-done-about-it/
@@ -164,3 +164,6 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
+# JRE
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk.jdk/Contents/Home"
