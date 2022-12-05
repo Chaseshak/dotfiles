@@ -7,16 +7,6 @@ export HOMEBREW_AUTO_UPDATE_SECS=90000000
 export PATH="/opt/homebrew/bin:$PATH"
 
 
-### HANDSHAKE ###
-# Specific to Handshake Remote Dev Environment
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-export NVM_DIR="$HOME/.nvm"
-source "$HOME/.nvm/nvm.sh"
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-### END HANDSHAKE ###
-
-
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CUSTOM="$HOME/.oh-my-zsh-custom/"
