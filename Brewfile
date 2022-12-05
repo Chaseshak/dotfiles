@@ -10,6 +10,7 @@ brew "watch"
 brew "yadm"
 cask "google-cloud-sdk"
 cask "dbeaver-community"
+brew "pyenv"
 
 # Git-based tools
 brew "gh"
