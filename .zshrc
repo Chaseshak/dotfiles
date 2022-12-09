@@ -82,7 +82,10 @@ source $ZSH/oh-my-zsh.sh
 ### TOOLS ###
 
 # Auto-completion for terminal typos
-eval $(thefuck --alias)
+if command -v thefuck &> /dev/null
+then
+  eval $(thefuck --alias)
+fi
 
 # For easy project navigation
 projects_path="$HOME/Projects"
@@ -98,7 +101,10 @@ project() {
 touch_directory() { mkdir -p "$(dirname "$1")" && touch "$1" ; }
 
 ### PATHS ###
-export PATH="$(pyenv root)/shims:${PATH}"
+if command -v pyenv &> /dev/null
+then
+  export PATH="$(pyenv root)/shims:${PATH}"
+fi
 export PATH="/usr/local/bin:${PATH}"
 export PATH="/usr/local/sbin:$PATH"
 
@@ -115,7 +121,13 @@ export PGHOST=localhost
 # Golang
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
-export GOROOT="$(brew --prefix golang)/libexec"
+
+# TODO: Fix GOROOT for non-brew installs
+if command -v brew &> /dev/null
+then
+  export GOROOT="$(brew --prefix golang)/libexec"
+fi
+
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
@@ -151,7 +163,10 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   if [ -d "$HOME/.local/bin" ] ; then
       PATH="$HOME/.local/bin:$PATH"
   fi
-  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+  if [ -f "/home/linuxbrew/.linuxbrew/bin/brew" ] ; then
+      eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+  fi
 fi
 
 # JRE
