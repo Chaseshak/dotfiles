@@ -1,6 +1,6 @@
 #!/bin/sh
 
-for user in {root,vscode}; do
+for user in {root,vscode,codespace}; do
   # Use ZSH as default shell
   if ! grep -q "root.*/bin.zsh" /etc/passwd
   then
