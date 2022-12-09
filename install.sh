@@ -1,4 +1,5 @@
 #!/bin/sh
 
 # Set default shell to zsh
-chsh -s $(which zsh)
+sudo chsh -s $(which zsh)
+source ~/.zshr
