@@ -114,6 +114,7 @@ then
 fi
 export PATH="/usr/local/bin:${PATH}"
 export PATH="/usr/local/sbin:$PATH"
+export PATH="$(brew --prefix libpq)/bin:$PATH"
 
 # Rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"

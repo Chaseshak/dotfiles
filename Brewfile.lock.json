@@ -987,6 +987,14 @@
         "CLT": "13.4.0.0.1.1651278267",
         "Xcode": "13.4.1",
         "macOS": "12.3"
+      },
+      "ventura": {
+        "HOMEBREW_VERSION": "3.6.13",
+        "HOMEBREW_PREFIX": "/opt/homebrew",
+        "Homebrew/homebrew-core": "b82e5e06a5d4afff317d24ac11f646652ba032aa",
+        "CLT": "14.1.0.0.1.1666437224",
+        "Xcode": "14.1",
+        "macOS": "13.0.1"
       }
     }
   }
