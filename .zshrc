@@ -100,6 +100,13 @@ project() {
 # Allows you to do a touch that creates any missing parent directories
 touch_directory() { mkdir -p "$(dirname "$1")" && touch "$1" ; }
 
+# (Mac Only atm) Sends a notification to the mac notification center
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  function notify() {
+    osascript -e "display notification \"$1\" with title \"$2\""
+  }
+fi
+
 ### PATHS ###
 if command -v pyenv &> /dev/null
 then
