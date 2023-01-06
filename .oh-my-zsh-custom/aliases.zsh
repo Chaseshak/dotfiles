@@ -44,6 +44,8 @@ alias assigned='gh issue list -a "@me"'
 alias authored='gh pr list -A "@me"'
 alias authored_by='gh pr list -A'
 alias gpf='git push --force-with-lease'
+alias gp='git push'
+alias gff='git pull --ff-only'
 alias gcan='git commit --amend -n --no-edit'
 alias gap='git add --intent-to-add . && git add --patch'
 
