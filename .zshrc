@@ -79,6 +79,13 @@ plugins=(git vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
+IN_CODESPACE=false
+NOT_IN_CODESPACE=true
+if [[ "$CODESPACES" == "true" ]]; then
+  IN_CODESPACE=true
+  NOT_IN_CODESPACE=false
+fi
+
 ### TOOLS ###
 
 # Auto-completion for terminal typos
@@ -117,8 +124,11 @@ export PATH="/usr/local/sbin:$PATH"
 export PATH="$(brew --prefix libpq)/bin:$PATH"
 
 # Rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+if [ $NOT_IN_CODESPACE = true];
+then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+fi
 
 #Postgres
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
