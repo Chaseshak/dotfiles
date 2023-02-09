@@ -38,7 +38,7 @@ alias gprm='git checkout `head-branch`; git pull --rebase origin `head-branch`'
 alias rbm='CB=$(git rev-parse --abbrev-ref HEAD); git checkout `head-branch`; git pull --rebase origin `head-branch`; git checkout $CB;  git rebase `head-branch`'
 alias gb='git checkout -b '
 alias gcf='git checkout $(git branch | fzf)'
-alias gdmb='git branch --merged | egrep -v "(^\*|master)" | xargs git branch -d'
+alias gdmb='git branch --merged | egrep -v "(^\*|main)" | xargs git branch -d'
 alias gdrb='git branch -r | awk "{print $1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print $1}" | xargs git branch -d'
 alias assigned='gh issue list -a "@me"'
 alias authored='gh pr list -A "@me"'
@@ -48,6 +48,7 @@ alias gp='git push'
 alias gff='git pull --ff-only'
 alias gcan='git commit --amend -n --no-edit'
 alias gap='git add --intent-to-add . && git add --patch'
+alias ghpr_watch='gh pr checks --watch && notify "PR Checks Finished!" "Checks Finished!"'
 
 # Misc.
 alias pip=pip3
