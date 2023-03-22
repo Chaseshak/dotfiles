@@ -1,4 +1,5 @@
 ### HOMEBREW ###
+
 # NOTE: This must go at the top to ensure homebrew is in the path
 # Tames the amount of auto installing homebrew does
 export HOMEBREW_NO_AUTO_UPDATE=1
@@ -118,16 +119,22 @@ fi
 if command -v pyenv &> /dev/null
 then
   export PATH="$(pyenv root)/shims:${PATH}"
+  eval "$(pyenv init -)"
 fi
 export PATH="/usr/local/bin:${PATH}"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$(brew --prefix libpq)/bin:$PATH"
 
 # Rbenv
-if [ $NOT_IN_CODESPACE = true];
+if [ "$NOT_IN_CODESPACE" = true ];
 then
-  export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)"
+fi
+
+# Copilot CLI
+if command -v github-copilot-cli &> /dev/null
+then
+  eval "$(github-copilot-cli alias -- "$0")"
 fi
 
 #Postgres
